@@ -1,0 +1,62 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f1b3d, #243b82);
+}
+
+/* Main Container */
+.form-container {
+  width: 550px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Heading */
+.form-container h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+/* Input Fields */
+.form-container input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 17px;
+  background: #111;
+  color: white;
+  box-sizing: border-box;
+}
+
+.form-container input::placeholder {
+  color: #bdbdbd;
+}
+
+/* Save Button */
+.form-container button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}

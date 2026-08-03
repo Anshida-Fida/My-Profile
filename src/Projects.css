@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg, #0f172a, #1e3a8a);
+}
+
+/* ==========================
+        PROJECTS SECTION
+========================== */
+
+.projects{
+    min-height:100vh;
+    padding:80px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.projects h1{
+    color:#fff;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.projects h1::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    background:#38bdf8;
+    margin:12px auto;
+    border-radius:10px;
+}
+
+/* ==========================
+            FORM
+========================== */
+
+.projects form{
+    width:100%;
+    max-width:700px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.projects input,
+.projects textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:16px;
+    background:black;
+}
+
+.projects textarea{
+    resize:none;
+    height:120px;
+}
+
+.projects form button{
+    background:#0f172a;
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.projects form button:hover{
+    background:#2563eb;
+}
+
+/* ==========================
+          TABLE
+========================== */
+
+.projects h3{
+    margin:40px 0 20px;
+    color:#fff;
+    font-size:28px;
+}
+
+.project-table{
+    width:95%;
+    max-width:1100px;
+    border-collapse:collapse;
+    background:black;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    font-size: small;
+}
+
+.project-table th{
+    background:#0f172a;
+    color:#fff;
+    padding:15px;
+    font-size:17px;
+}
+
+.project-table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.project-table tr:hover{
+    background:#070707;
+}
+
+/* ==========================
+          BUTTONS
+========================== */
+
+.edit-btn,
+.delete-btn{
+    padding:8px 18px;
+    border:none;
+    border-radius:8px;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.edit-btn{
+    background:#2563eb;
+}
+
+.edit-btn:hover{
+    background:#1d4ed8;
+}
+
+.delete-btn{
+    background:#dc2626;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* ==========================
+      RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:768px){
+
+.projects h1{
+    font-size:32px;
+}
+
+.projects form{
+    width:95%;
+    padding:20px;
+}
+
+.project-table{
+    display:block;
+    overflow-x:auto;
+}
+
+.project-table th,
+.project-table td{
+    white-space:nowrap;
+}
+
+.edit-btn,
+.delete-btn{
+    font-size:14px;
+    padding:7px 12px;
+}
+
+}

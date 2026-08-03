@@ -1,0 +1,41 @@
+/* Skills Section */
+.skills{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;   /* Title on top */
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    padding:60px 20px;
+}
+
+/* Title */
+.skills-title{
+    font-size:60px;
+    color:white;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+/* Cards Container */
+.skills-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* Skill Card */
+.skill-card{
+    width:320px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+}

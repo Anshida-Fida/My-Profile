@@ -1,0 +1,176 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    min-height: 100vh;
+}
+
+/* Main Container */
+.skills-container{
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.skills-container h2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Input Section */
+.add-skill{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.add-skill input{
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.add-skill input::placeholder{
+    color: #ddd;
+}
+
+.add-skill button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.add-skill button:hover{
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Table */
+.skills-table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Header */
+.skills-table thead{
+    background: #2563eb;
+}
+
+.skills-table th{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Table Body */
+.skills-table td{
+    padding: 15px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.skills-table tbody tr:nth-child(even){
+    background: rgba(255,255,255,0.05);
+}
+
+.skills-table tbody tr:hover{
+    background: rgba(37,99,235,0.25);
+    transition: 0.3s;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn{
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.edit-btn{
+    background:#d97706;
+    color: white;
+}
+
+.edit-btn:hover{
+    background: #d97706;
+}
+
+.delete-btn{
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover{
+    background: #dc2626;
+}
+
+/* No Data Row */
+.skills-table td[colspan]{
+    padding: 20px;
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .skills-container{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .add-skill{
+        flex-direction: column;
+    }
+
+    .add-skill button{
+        width: 100%;
+    }
+
+    .skills-table{
+        display: block;
+        overflow-x: auto;
+    }
+
+    .skills-table th,
+    .skills-table td{
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg, #0f172a, #1e3a8a);
+}
+
+/* ==========================
+      EXPERIENCE SECTION
+========================== */
+
+.experience{
+    min-height:100vh;
+    padding:70px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.experience h1{
+    font-size:40px;
+    color:white;
+    margin-bottom:30px;
+}
+
+.experience h1::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    background:#38bdf8;
+    margin:10px auto;
+    border-radius:5px;
+}
+
+/* ==========================
+          FORM
+========================== */
+
+.experience form{
+    width:100%;
+    max-width:700px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-bottom:40px;
+}
+
+.experience input,
+.experience textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:black;
+    font-size:16px;
+}
+
+.experience textarea{
+    resize:none;
+    height:120px;
+}
+
+.experience form button{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.experience form button:hover{
+    background:#2563eb;
+}
+
+/* ==========================
+        TABLE
+========================== */
+
+.experience h3{
+    color:white;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.experience-table{
+    width:95%;
+    max-width:1000px;
+    border-collapse:collapse;
+    background:black;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    font-size: small;
+}
+
+.experience-table th{
+    background:#0f172a;
+    color:white;
+    padding:15px;
+    font-size:17px;
+}
+
+.experience-table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.experience-table tr:hover{
+    background:#090909;
+}
+
+/* ==========================
+        BUTTONS
+========================== */
+
+.edit-btn,
+.delete-btn{
+    padding:8px 16px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.edit-btn{
+    background:#2563eb;
+}
+
+.edit-btn:hover{
+    background:#1d4ed8;
+}
+
+.delete-btn{
+    background:#dc2626;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.experience h1{
+    font-size:32px;
+}
+
+.experience form{
+    width:95%;
+    padding:20px;
+}
+
+.experience-table{
+    display:block;
+    overflow-x:auto;
+}
+
+.experience-table th,
+.experience-table td{
+    white-space:nowrap;
+}
+
+.edit-btn,
+.delete-btn{
+    padding:7px 12px;
+    font-size:14px;
+}
+
+}

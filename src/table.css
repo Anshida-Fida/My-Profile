@@ -1,0 +1,106 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    min-height: 100vh;
+}
+
+/* Container */
+.table-container{
+    width: 95%;
+    max-width: 1300px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.table-container h2{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Header */
+thead{
+    background: #2563eb;
+}
+
+thead th{
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Body */
+tbody td{
+    padding: 14px;
+    text-align: center;
+    color:white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    word-break: break-word;
+}
+
+/* Alternate rows */
+tbody tr:nth-child(even){
+    background: rgba(255,255,255,0.06);
+}
+
+/* Hover Effect */
+tbody tr:hover{
+    background: rgba(37,99,235,0.3);
+    transition: 0.3s ease;
+}
+
+/* Document ID Column */
+tbody td:first-child{
+    font-size: 13px;
+    color: #dbeafe;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .table-container{
+        width: 98%;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    table{
+        min-width: 900px;
+    }
+
+    .table-container h2{
+        font-size: 26px;
+    }
+
+    thead th,
+    tbody td{
+        font-size: 14px;
+        padding: 10px;
+    }
+}
