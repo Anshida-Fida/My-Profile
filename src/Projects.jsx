@@ -8,7 +8,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import { db } from "./config/config";
+import { auth, db } from "./config/config";
 
 export default function Projects() {
   const [projectName, setProjectName] = useState("");
@@ -94,25 +94,27 @@ export default function Projects() {
   return (
     <section className="projects">
       <h1>My Projects</h1>
-
+         {auth.currentUser?(
       <form onSubmit={handleSubmit}>
+      
         <input
           type="text"
           placeholder="Project Name"
           value={projectName}
           onChange={(e) => setProjectName(e.target.value)}
         />
-
+      
+       
         <textarea
           placeholder="Project Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-
+      {auth.currentUser?(
         <button type="submit">
           {editId ? "Update Project" : "Add Project"}
-        </button>
-      </form>
+        </button>):null}
+      </form>  ):null}
 
       <h3>Project List</h3>
 
@@ -140,23 +142,25 @@ export default function Projects() {
                 <td>{item.description}</td>
 
                 <td>
+                  {auth.currentUser?(
                   <button
                     type="button"
                     className="edit-btn"
                     onClick={() => handleEdit(item)}
                   >
                     Edit
-                  </button>
+                  </button>):null}
                 </td>
 
                 <td>
+                  {auth.currentUser?(
                   <button
                     type="button"
                     className="delete-btn"
                     onClick={() => handleDelete(item.id)}
                   >
                     Delete
-                  </button>
+                  </button>):null}
                 </td>
               </tr>
             ))

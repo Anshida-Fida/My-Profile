@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import  "./Experience.css"
 import { collection, getDocs, limit, orderBy, query , updateDoc, doc, addDoc, deleteDoc, } from "firebase/firestore";
-import {db} from "./config/config"
+import {auth, db} from "./config/config"
 
 export default function Experience() {
     const [company, setCompany] = useState("");
@@ -90,7 +90,7 @@ export default function Experience() {
   return (
    <section className="experience">
     <h1>Experience</h1>
-
+       {auth.currentUser?(
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -107,11 +107,11 @@ export default function Experience() {
           value={YearofExperience}
           onChange={(e) => setYearofExperience(e.target.value)}
         />
-
+       {auth.currentUser?(
         <button type="submit">
           {editId ? "Update Experience" : "Add Experience"}
-        </button>
-      </form>
+        </button>):null}
+      </form>):null}
 
       <h3>Experience List</h3>
 
@@ -141,23 +141,25 @@ export default function Experience() {
                 <td>{item.YearofExperience}</td>
 
                 <td>
+                  {auth.currentUser? (
                   <button
                     type="button"
                     className="edit-btn"
                     onClick={() => handleEdit(item)}
                   >
                     Edit
-                  </button>
+                  </button>):null}
                 </td>
 
                 <td>
+                  {auth.currentUser?(
                   <button
                     type="button"
                     className="delete-btn"
                     onClick={() => handleDelete(item.id)}
                   >
                     Delete
-                  </button>
+                  </button>):null}
                 </td>
               </tr>
             ))

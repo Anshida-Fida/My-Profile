@@ -83,10 +83,7 @@ getData();
           <h2>Conatct Me</h2>
 
           <p> Email: anshidafida@example.com</p>
-
-          <p> Phone: +91 8590939512</p>
-
-          <p> Location: Kerala, India</p>
+         <p> Location: Kerala, India</p>
 
           
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./About.css";
 import { collection, getDocs, limit, orderBy, query , updateDoc, doc, addDoc, deleteDoc, } from "firebase/firestore";
-import {db} from "./config/config";
+import {auth, db} from "./config/config";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -65,6 +65,7 @@ export default function About() {
 
       <div className="about-card">
         <h2>Hello, I'm Anshida Fida</h2>
+      
               {editing ? (
         <>
           <textarea
@@ -89,8 +90,9 @@ export default function About() {
       ) : (
         <>
           <p>{about}</p>
-
+        {auth.currentUser?(
           <button onClick={() => setEditing(true)}>Edit</button>
+        ):null}
         </>
       )}
     </div>
