@@ -91,9 +91,7 @@ useEffect(() => {
   
   return (
 
-    <div
-   
-    >
+    <div className="portfolio-page" >
    
  
       <nav>
@@ -123,6 +121,7 @@ useEffect(() => {
         </ul>
       </nav>
       <section id="Home" >
+        <div className="home-content">
          <img 
   
     src={profile_images}
@@ -156,12 +155,14 @@ useEffect(() => {
         
 
         <button>Download Resume</button>
+        </div>
       </section>
  
     
-      <section>
+      <section >
         <h2>About Me</h2>
 <h2>Hello, I'm Anshida Fida</h2>
+<div className="about-box">
 
         <p>
           I am a BCA student with a passion for web development,
@@ -177,6 +178,7 @@ useEffect(() => {
           to improve my technical skills and contribute to
           meaningful projects.
         </p>
+        </div>
        <div className="about-info">
           <div>
             <h3> Education</h3>
@@ -201,23 +203,24 @@ useEffect(() => {
         <h2>Skills</h2>
 
       <div className="skills-container">
-
-        <div className="skill-card">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>JavaScript</p>
-          <p>React.js</p>
+  <div className="skill-group">
+            <h3>Frontend</h3>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>React.js</p>
         </div>
 
-        <div className="skill-card">
-          <h2>Programming</h2>
-          <p>Python</p>
-          <p>C</p>
-          <p>Java</p>
+        <div className="skill-group">
+            <h3>Programming</h3>
+            <p>Python</p>
+            <p>C</p>
+            <p>Java</p>
         </div>
 
-        <div className="skill-card">
-          <p>MySQL</p>
+        <div className="skill-group">
+            <h3>Database</h3>
+            <p>MySQL</p>
         </div>
       </div>
       </section>
@@ -278,7 +281,9 @@ useEffect(() => {
 
    
       <section>
+       
         <h2>Contact Me</h2>
+        
         <form >
           <input
             type="text"

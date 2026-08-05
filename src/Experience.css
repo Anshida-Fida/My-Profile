@@ -7,187 +7,225 @@
     font-family:'Poppins',sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg, #0f172a, #1e3a8a);
-}
-
-/* ==========================
+/* =======================
       EXPERIENCE SECTION
-========================== */
+======================= */
 
 .experience{
     min-height:100vh;
-    padding:70px 20px;
+    padding:80px 20px;
     display:flex;
     flex-direction:column;
     align-items:center;
+    background:#afaca3;
 }
 
+/* =======================
+        HEADING
+======================= */
+
 .experience h1{
-    font-size:40px;
-    color:white;
-    margin-bottom:30px;
+    font-size:42px;
+    color:#222;
+    margin-bottom:40px;
+    position:relative;
 }
 
 .experience h1::after{
     content:"";
     display:block;
-    width:70px;
+    width:90px;
     height:4px;
-    background:#38bdf8;
+    background:white;
     margin:10px auto;
-    border-radius:5px;
+    border-radius:20px;
 }
 
-/* ==========================
+/* =======================
           FORM
-========================== */
+======================= */
 
 .experience form{
-    width:100%;
-    max-width:700px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.25);
+    width:80%;
+    max-width:850px;
+    background:#c6c2b4;
+    border:1px solid #efe5c8;
     border-radius:20px;
-    padding:30px;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    padding:35px;
     display:flex;
     flex-direction:column;
     gap:18px;
     margin-bottom:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
 }
+
+.experience form:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+/* =======================
+        INPUTS
+======================= */
 
 .experience input,
 .experience textarea{
     width:100%;
-    padding:14px;
-    border:none;
+    padding:15px;
+    background:#e7e4df;
+    border:2px solid #e6d5a8;
+    border-radius:12px;
     outline:none;
-    border-radius:10px;
-    background:black;
-    font-size:16px;
+    font-size:17px;
+    color:#222;
+    transition:.3s;
+}
+
+.experience input::placeholder,
+.experience textarea::placeholder{
+    color:#000;
 }
 
 .experience textarea{
+    min-height:150px;
     resize:none;
-    height:120px;
 }
 
+.experience input:focus,
+.experience textarea:focus{
+    border-color:#000;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* =======================
+        BUTTON
+======================= */
+
 .experience form button{
+    margin-top:10px;
     padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#0f172a;
+    background:black;
     color:white;
+    border:none;
+    border-radius:8px;
     font-size:17px;
     cursor:pointer;
     transition:.3s;
 }
 
 .experience form button:hover{
-    background:#2563eb;
+    transform:scale(1.05);
 }
 
-/* ==========================
-        TABLE
-========================== */
+/* =======================
+      TABLE TITLE
+======================= */
 
 .experience h3{
-    color:white;
-    font-size:28px;
+    font-size:30px;
+    color:#222;
     margin-bottom:20px;
 }
 
+/* =======================
+          TABLE
+======================= */
+
 .experience-table{
-    width:95%;
-    max-width:1000px;
+    width:90%;
+    max-width:1100px;
     border-collapse:collapse;
-    background:black;
-    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-    font-size: small;
+    border-radius:20px;
+    background:#c6c2b4;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 .experience-table th{
-    background:#0f172a;
+    background:black;
     color:white;
-    padding:15px;
+    padding:16px;
     font-size:17px;
 }
 
 .experience-table td{
-    padding:15px;
+    padding:16px;
     text-align:center;
-    border-bottom:1px solid #ddd;
+    color:black;
+    border-bottom:1px solid #e6d5a8;
+    font-size: 16px;
+}
+
+.experience-table tr:nth-child(even){
+    background:#d7d3c6;
 }
 
 .experience-table tr:hover{
-    background:#090909;
+    background:#e7e4df;
 }
 
-/* ==========================
-        BUTTONS
-========================== */
+/* =======================
+      ACTION BUTTONS
+======================= */
 
 .edit-btn,
 .delete-btn{
-    padding:8px 16px;
+    padding:10px 18px;
     border:none;
     border-radius:8px;
     color:white;
     cursor:pointer;
     transition:.3s;
-    font-size:15px;
+    margin:2px;
 }
 
 .edit-btn{
-    background:#2563eb;
+    background:black;
 }
 
 .edit-btn:hover{
-    background:#1d4ed8;
+    transform:scale(1.05);
 }
 
 .delete-btn{
-    background:#dc2626;
+    background:#b22222;
 }
 
 .delete-btn:hover{
-    background:#b91c1c;
+    background:#8b0000;
+    transform:scale(1.05);
 }
 
-/* ==========================
+/* =======================
       RESPONSIVE
-========================== */
+======================= */
 
 @media(max-width:768px){
 
-.experience h1{
-    font-size:32px;
-}
+    .experience h1{
+        font-size:32px;
+    }
 
-.experience form{
-    width:95%;
-    padding:20px;
-}
+    .experience form{
+        width:95%;
+        padding:25px;
+    }
 
-.experience-table{
-    display:block;
-    overflow-x:auto;
-}
+    .experience-table{
+        width:95%;
+        display:block;
+        overflow-x:auto;
+    }
 
-.experience-table th,
-.experience-table td{
-    white-space:nowrap;
-}
+    .experience-table th,
+    .experience-table td{
+        white-space:nowrap;
+    }
 
-.edit-btn,
-.delete-btn{
-    padding:7px 12px;
-    font-size:14px;
-}
-
+    .edit-btn,
+    .delete-btn{
+        width:90px;
+        margin:5px;
+    }
 }
