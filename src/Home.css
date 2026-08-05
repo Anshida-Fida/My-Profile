@@ -460,7 +460,7 @@ border-top:1px solid #ddd;
 @media(max-width:768px){
 
 nav{
-    flex-direction:column;
+    flex-direction:row;
     padding:20px;
 }
 
