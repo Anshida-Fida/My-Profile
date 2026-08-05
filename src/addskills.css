@@ -53,7 +53,7 @@ body{
 }
 
 .add-skill input::placeholder{
-    color: #ddd;
+    color: black;
 }
 
 .add-skill button{
@@ -79,6 +79,8 @@ body{
     border-collapse: collapse;
     overflow: hidden;
     border-radius: 10px;
+    background: rgb(121, 118, 118);
+
 }
 
 /* Header */
@@ -124,21 +126,21 @@ body{
 }
 
 .edit-btn{
-    background:#d97706;
+    background:black;
     color: white;
 }
 
 .edit-btn:hover{
-    background: #d97706;
+    background: black;
 }
 
 .delete-btn{
-    background: #ef4444;
+    background: black;
     color: white;
 }
 
 .delete-btn:hover{
-    background: #dc2626;
+    background: black;
 }
 
 /* No Data Row */
